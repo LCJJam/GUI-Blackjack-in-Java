@@ -2,6 +2,7 @@ package manager;
 
 import java.util.ListIterator;
 import deck.Card;
+import deck.CardHand;
 
 /**
  * @author Jonathan Ho
@@ -25,6 +26,7 @@ public class DealerManager
 	private static boolean dealerTurn(ListIterator<Card> deckIterator,
 									  CardHand dealerHand)
 	{
+		return false;
 		// dealer logic
 	}
 }

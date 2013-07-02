@@ -4,6 +4,7 @@ import java.awt.Dialog;
 import java.util.ListIterator;
 
 import deck.Card;
+import deck.CardHand;
 import gui.BlackJackGUI;
 
 /**
@@ -25,7 +26,7 @@ public class BlackJackDriver
 	private static void endRound(CardHand playerHand, CardHand dealerHand,
 							     int bankroll, int bet)
 	{
-		if(palyerHand.handValue() == dealerHand.handValue())
+		if(playerHand.handValue() == dealerHand.handValue())
 			// push
 		else if(playerHand.handValue() > dealerHand.handValue())
 			// player win
