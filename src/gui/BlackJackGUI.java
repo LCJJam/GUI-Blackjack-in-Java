@@ -27,15 +27,6 @@ public class BlackJackGUI extends JFrame
 	// save new game button for later, most likely won't be a button
 	// refer to notes: using JMenu, JMenuBar, JMenuItem
 	
-	
-	/*
-	 * Encapsulated in other classes
-	 * private JButton hitButton, standButton, betButton, newGameButton;
-	private JTextArea gameTextArea;	 Text info about game 
-	private JScrollPane scrollPane;	 Scrolling pane 
-	private JLabel visualDisplay;	 Display cards here 
-	private JPanel buttonContainer;	 To hold JButtons */
-	
 	private GameText gameText;
 	private VisualDisplay visualDisplay;
 	private ButtonPanel buttonPanel;
