@@ -7,6 +7,15 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
+/**
+ * @author Jonathan Ho
+ * This class will hold the 3 buttons for the game
+ * being hit, bet, and stand.
+ * This class will hold the 3 buttons so that they may
+ * be moved around as one unit instead of 3 separate buttons.
+ * Event handling is done for the buttons in this class.
+ */
+@SuppressWarnings("serial")
 public class ButtonPanel extends JPanel 
 {
 	private JButton hitButton, standButton, betButton;

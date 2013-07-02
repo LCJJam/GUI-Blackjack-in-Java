@@ -19,17 +19,26 @@ import java.awt.event.ActionListener;
  * the game and defines methods for use in the 
  * driver class.
  */
+@SuppressWarnings("serial")
 public class BlackJackGUI extends JFrame
 {
 	// Make new game button in File... like other windows app the dropdown
 	// spinner like thing in Android
 	// save new game button for later, most likely won't be a button
 	// refer to notes: using JMenu, JMenuBar, JMenuItem
-	private JButton hitButton, standButton, betButton, newGameButton;
-	private JTextArea gameTextArea;	/* Text info about game */
-	private JScrollPane scrollPane;	/* Scrolling pane */
-	private JLabel visualDisplay;	/* Display cards here */
-	private JPanel buttonContainer;	/* To hold JButtons */
+	
+	
+	/*
+	 * Encapsulated in other classes
+	 * private JButton hitButton, standButton, betButton, newGameButton;
+	private JTextArea gameTextArea;	 Text info about game 
+	private JScrollPane scrollPane;	 Scrolling pane 
+	private JLabel visualDisplay;	 Display cards here 
+	private JPanel buttonContainer;	 To hold JButtons */
+	
+	private GameText gameText;
+	private VisualDisplay visualDisplay;
+	private ButtonPanel buttonPanel;
 	
 	/* 
 	 * When this class becomes instantiated the default
@@ -40,71 +49,18 @@ public class BlackJackGUI extends JFrame
 	{
 		this.setTitle("Jon's Awesome Casino!!");
 		this.setSize(700, 640);
-		this.setDefaultCloseOperation(BlackJackGUI.EXIT_ON_CLOSE);
-
-		// Create area to display cards
-		this.visualDisplay = new JLabel();
+		this.setDefaultCloseOperation(BlackJackGUI.EXIT_ON_CLOSE);	
 		
-		// Create text area
-		this.gameTextArea = new JTextArea(0, 20);
+		// Create components for this game
+		gameText = new GameText();
+		buttonPanel = new ButtonPanel();
+		visualDisplay = new VisualDisplay();
 		
-		// Put text area as the viewport for scroll pane
-		this.scrollPane = new JScrollPane(this.gameTextArea);
-		
-		// Creating buttons
-		this.hitButton = new JButton("Hit");
-		this.standButton = new JButton("Stand");
-		this.betButton = new JButton("Bet");
-		
-		/* COMMENT OUT
-		// Register action listeners
-		this.hitButton.addActionListener(new HitButtonListener());
-		this.standButton.addActionListener(new StandButtonListener());
-		this.betButton.addActionListener(new BetButtonListener());
-		*/
-		
-		// Create JPanel
-		this.buttonContainer = new JPanel(new GridLayout(0, 3));
-		
-		// Add buttons to JPanel
-		this.buttonContainer.add(this.hitButton);
-		this.buttonContainer.add(this.standButton);
-		this.buttonContainer.add(this.betButton);
-		
-		// Add JComponents to this JFrame
-		this.add(this.buttonContainer, BorderLayout.SOUTH);
+		// Add components to game
+		this.add(this.gameText, BorderLayout.EAST);
+		this.add(this.buttonPanel, BorderLayout.SOUTH);
 		this.add(this.visualDisplay, BorderLayout.CENTER);
-		this.add(this.scrollPane, BorderLayout.EAST);
 		
 		this.setVisible(true);
 	}
-	
-// BLOCK BELOW W/ COMMENT
-	
-	/* Performs action for hit button 
-	private class HitButtonListener implements ActionListener 
-	{
-		public void actionPerformed(ActionEvent e)
-		{
-			// add logic
-		}
-	}
-	
-	 Performs action for stand button 
-	private class StandButtonListener implements ActionListener
-	{
-		public void actionPerformed(ActionEvent e)
-		{
-			// add logic
-		}
-	}
-	
-	 Performs action for bet button 
-	private class BetButtonListener implements ActionListener 
-	{
-		public void actionPerformed(ActionEvent e)
-		{
-			// add logic
-		}
-	}*/
 }
