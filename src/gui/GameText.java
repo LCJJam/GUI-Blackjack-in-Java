@@ -15,6 +15,11 @@ public class GameText extends JScrollPane
 {
 	private final static JTextArea JTA = new JTextArea(0, 20);
 	
+	// Disable user editing on this text area
+	static {
+		JTA.setEditable(false);
+	}
+	
 	/* Default constructor calls overloaded constructor */
 	public GameText()
 	{

@@ -2,6 +2,9 @@ package manager;
 
 import java.util.ListIterator;
 
+import deck.Card;
+import deck.CardHand;
+
 /**
  * @author Jonathan Ho
  * This class will have methods and variables pertaining to a player
@@ -16,13 +19,14 @@ public class PlayerManager
 	private static boolean playerTurn(ListIterator<Card> deckIterator,
 									  CardHand playerHand)
 	{
+		return false;
 		// logic
 		// need to access CardHand
 	}
 	
 	private static int getBet(int bankroll)
 	{
-		int bet;
+		int bet = 0;
 		// loop logic
 		return bet;
 	}

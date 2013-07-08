@@ -23,6 +23,7 @@ public class DealerManager
 		return temp;
 	}
 	
+	@SuppressWarnings("unused")
 	private static boolean dealerTurn(ListIterator<Card> deckIterator,
 									  CardHand dealerHand)
 	{
