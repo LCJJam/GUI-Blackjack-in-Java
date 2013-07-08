@@ -10,6 +10,11 @@ import javax.imageio.ImageIO;
 
 import deck.Card.*;		/* For Suit and Rank */
 
+
+/**
+ * @author Jonathan Ho
+ * Not done yet, fix up laters.
+ */
 public class CardDisplayManager
 {
 	private final static String imgPathName = new String("/img/Cards.gif");
