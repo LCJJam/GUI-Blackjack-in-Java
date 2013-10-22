@@ -10,6 +10,7 @@ import deck.CardHand;
  * This class will be used to implement the factory pattern to return
  * a CardHand object. 
  */
+/** DEAD CLASS **/
 public class CardHandManager 
 {
 	@SuppressWarnings("unused")

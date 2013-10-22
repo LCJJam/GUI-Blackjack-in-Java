@@ -29,7 +29,8 @@ public class CardHand
 		this.value += newCard.rank().getValue();
 	}
 
-	/* Returns the removed card from the hand at the specified index.
+	/* 
+	 * Returns the removed card from the hand at the specified index.
 	 * Subtracts the value from the overall hand. Although that's
 	 * kind of pointless and totally unnecessary in blackjack
 	 * since you can't remove a card anyways... uh...
